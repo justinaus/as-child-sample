@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
+import FilledButton from '@/components/buttons/FilledButton';
 
 export default function Home() {
   return (
@@ -9,13 +12,26 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main
+      <div
         css={{
-          color: 'red',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
         }}
       >
-        Hello
-      </main>
+        <FilledButton theme="dark">Button</FilledButton>
+        <FilledButton
+          theme="dark"
+          css={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          asChild
+        >
+          <Link href="/about">Link</Link>
+        </FilledButton>
+      </div>
     </>
   );
 }
