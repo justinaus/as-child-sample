@@ -1,11 +1,33 @@
-## As-child-sample
-작성 중..
+# As-child-sample
 
+## ⚠️ Problems
+
+```jsx
+// bad.
+<a href="/somewhere">
+  <CommonFilledButton />
+</a>
+```
+
+https://validator.w3.org/nu/?showsource=yes&doc=http://dropbox.beausmith.com/static-html/invalid-button-anchor-markup.html
+
+https://stackoverflow.com/questions/42463263/wrapping-a-react-router-link-in-an-html-button
+
+## Solutions
+
+### as-props
 [as-props](https://www.robinwieruch.de/react-as-prop)
+
+Not enough. Difficulties with scalability, etc.
+
 
 [as-child](https://www.jacobparis.com/content/react-as-child)
 
+Not so bad.
+
 ## Demo
+
+https://as-child-sample.vercel.app/
 
 ## Getting Started
 
@@ -20,10 +42,10 @@ yarn dev
 
 
 
-### Usage
+## Usage
 ```jsx
 <FilledButton asChild>
-  <Link href='/' >Link</Link>
+  <a href='/somewhere'>Link</a>
 </FilledButton>
 ```
 
